@@ -1,71 +1,25 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  background-color: #000028;
-  color: #f1b2ce;
+  --text-color: var(--color-pink-2, #f1b2ce);
+  --brand-color: var(--color-purple-1, #db00ff);
+  --secondary-color: var(--color-purple-2, #ff0070);
+  --secondary-color-2: var(--color-purple-3, #ff007040);
+  --accent-color: var(--color-purple-2, #ff0070);
+  --highlight-color: var(--color-black-1, #000028);
+  --page-background-color: var(--color-black-1, #000028);
+  --page-background-image: url("../images/cover-image-dark.png");
+  --corner-text-visibility: visible;
 }
 
-.page.theme_dark .decorated-zone {
-  background-image: url(/slozhno-sosredotochitsya/images/cover-image-dark.png);
-}
-
-.page.theme_dark .header__theme-menu-list {
-  color: #ff0070;
-}
-
-.page.theme_dark .header__theme-menu-button:hover {
-  border: solid 1px rgba(255, 0, 112, 0.4);
-}
-
-.page.theme_dark .header__theme-menu-button_active {
-  border: solid 1px #ff0070;
-  cursor: default;
-}
-
-.page.theme_light .header__theme-menu-button:focus {
-  text-decoration: underline #ff0070;
-}
-
-.page.theme_dark h4,
-.page.theme_dark h3 {
-  background-color: #ff0070;
-  color: #000028;
-  font-size: 18px;
-}
-
-.page.theme_dark .link {
-  text-shadow: 2px 2px 0px #ff0070;
-  text-decoration: none;
-}
-
-.page.theme_dark h1,
-.page.theme_dark .footer__content {
-  color: #db00ff;
-}
-
-.page.theme_dark .image__container-text {
-  background-color: #ff0070;
-  color: #000028;
-}
-
-.page.theme_dark h2,
-.page.theme_dark .header__theme-menu-list {
-  color: #ff0070;
-}
-
-.page.theme_dark .header__text {
-  background-color: #ff0070;
-  color: #000028;
-}
-
-.page.theme_dark .link:hover{
-  text-decoration: underline #f1b2ce;
-}
-
-.page.theme_dark .link:focus{
-  border: solid 0.5px #ff0070;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--color-pink-2, #f1b2ce);
+    --brand-color: var(--color-purple-1, #db00ff);
+    --secondary-color: var(--color-purple-2, #ff0070);
+    --secondary-color-2: var(--color-purple-3, #ff007040);
+    --accent-color: var(--color-purple-2, #ff0070);
+    --highlight-color: var(--color-black-1, #000028);
+    --page-background-color: var(--color-black-1, #000028);
+    --page-background-image: url("../images/cover-image-dark.png");
+    --rec-decor-visibility: visible;
+  }
 }
